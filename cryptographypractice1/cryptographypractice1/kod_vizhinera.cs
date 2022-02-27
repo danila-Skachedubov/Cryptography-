@@ -24,31 +24,12 @@ namespace cryptographypractice1
         public void Encryption(string Input, string key)
         {
             string output = string.Empty;
-            char[] slovar = dictionatry.ToCharArray();
-
             byte[] mass = new byte[Input.Length];
             byte[] mass2 = new byte[key.Length];
+         
+            mass = WordNumbering(Input);           
+            mass2 = KeyNumbering(key);
 
-            Input.ToUpper();
-            key.ToUpper();
-
-            for (int j = 0; j < Input.Length; j++)
-            {
-                int positionOfWord = dictionatry.IndexOf(Input[j]);
-                if (dictionatry.IndexOf(Input[j]) == -1)
-                {
-                    //значения не соответсвующие словарю итгнорируются? как лучше сделать оставлять пробелы и знаки препинания или игнорировать?
-                    continue;
-                }
-                else
-                    mass[j] = (byte)positionOfWord;
-            }
-
-            for (int k = 0; k < key.Length; k++)
-            {
-                int positionOfKey = dictionatry.IndexOf(key[k]);
-                mass2[k] = (byte)positionOfKey;
-            }
             int counter = 0;
             for (int i = 0; i < Input.Length; i++)
             {
@@ -59,15 +40,66 @@ namespace cryptographypractice1
                 else
                     positionOfOutput = (mass2[counter] + mass[i]) % 25;
                 counter++;
-                string symbolOfSlovar = slovar[positionOfOutput].ToString();
+                string symbolOfSlovar = dictionatry[positionOfOutput].ToString();   //slovar[positionOfOutput].ToString();
                 output = output.Insert(i, symbolOfSlovar);
             }
             Console.WriteLine(output);
         }
 
+        private byte[] WordNumbering(string input)
+        {
+            input.ToUpper();
+            char[] slovar = dictionatry.ToCharArray();
+            byte[] mass = new byte[input.Length];
+           
+            for (int j = 0; j < input.Length; j++)
+            {
+                int positionOfWord = dictionatry.IndexOf(input[j]);
+                if (dictionatry.IndexOf(input[j]) == -1)
+                {
+                    //значения не соответсвующие словарю итгнорируются? как лучше сделать оставлять пробелы и знаки препинания или игнорировать?
+                    continue;
+                }
+                else
+                    mass[j] = (byte)positionOfWord;
+            }
+            return mass;
+        }
+
+        private byte[] KeyNumbering(string key)
+        {
+            key.ToUpper();
+            byte[] mass2 = new byte[key.Length];
+            for (int k = 0; k < key.Length; k++)
+            {
+                int positionOfKey = dictionatry.IndexOf(key[k]);
+                mass2[k] = (byte)positionOfKey;
+            }
+            return mass2;
+        }   
+    
         public void Decryption(string shifr, string key)
         {
+            byte[] massOfShifr = new byte[shifr.Length];
+            byte[] massOfKey = new byte[key.Length];
+            string output = string.Empty;
+            massOfShifr = WordNumbering(shifr);
+            massOfKey = KeyNumbering(key);
 
+            int counter = 0;
+            for (int i = 0; i < shifr.Length; i++)
+            {
+                if (counter >= key.Length) counter = 0;
+                int positionOfOutput = 0;
+                /*if (massOfShifr[counter] + massOfKey[i] > dictionatry.Length)
+                    positionOfOutput = (massOfKey[counter] + massOfShifr[i]) - dictionatry.Length - 1;
+                else*/
+                    positionOfOutput = (massOfShifr[counter] - massOfKey[i] + 25) % 25;
+                counter++;
+                string symbolOfSlovar = dictionatry[positionOfOutput].ToString();   //slovar[positionOfOutput].ToString();
+                output = output.Insert(i, symbolOfSlovar);
+            }
+            Console.WriteLine(output);
         }
     }
 }

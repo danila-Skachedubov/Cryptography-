@@ -8,7 +8,7 @@ namespace cryptographypractice1
         {
             kod_vizhinera newKod = new kod_vizhinera("М", "к");
             newKod.Encryption("ATTACKATDAWN", "LEMONLEMONLE");
-
+            newKod.Decryption("LXFOPVEFRNHR", "LEMONLEMONLE");
         }
     }
 }

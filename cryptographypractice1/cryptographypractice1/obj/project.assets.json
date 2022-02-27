@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\иНСТИТУТ\\cryptographypractice1\\cryptographypractice1\\cryptographypractice1.csproj",
+      "projectUniqueName": "C:\\Users\\Uset\\Documents\\GitHub\\Cryptography-\\cryptographypractice1\\cryptographypractice1\\cryptographypractice1.csproj",
       "projectName": "cryptographypractice1",
-      "projectPath": "H:\\иНСТИТУТ\\cryptographypractice1\\cryptographypractice1\\cryptographypractice1.csproj",
+      "projectPath": "C:\\Users\\Uset\\Documents\\GitHub\\Cryptography-\\cryptographypractice1\\cryptographypractice1\\cryptographypractice1.csproj",
       "packagesPath": "C:\\Users\\Uset\\.nuget\\packages\\",
-      "outputPath": "H:\\иНСТИТУТ\\cryptographypractice1\\cryptographypractice1\\obj\\",
+      "outputPath": "C:\\Users\\Uset\\Documents\\GitHub\\Cryptography-\\cryptographypractice1\\cryptographypractice1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Uset\\AppData\\Roaming\\NuGet\\NuGet.Config",

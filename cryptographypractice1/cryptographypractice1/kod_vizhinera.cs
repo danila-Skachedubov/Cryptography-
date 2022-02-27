@@ -26,8 +26,8 @@ namespace cryptographypractice1
             string output = string.Empty;
             byte[] mass = new byte[Input.Length];
             byte[] mass2 = new byte[key.Length];
-         
-            mass = WordNumbering(Input);           
+
+            mass = WordNumbering(Input);
             mass2 = KeyNumbering(key);
 
             int counter = 0;
@@ -51,7 +51,7 @@ namespace cryptographypractice1
             input.ToUpper();
             char[] slovar = dictionatry.ToCharArray();
             byte[] mass = new byte[input.Length];
-           
+
             for (int j = 0; j < input.Length; j++)
             {
                 int positionOfWord = dictionatry.IndexOf(input[j]);
@@ -76,8 +76,8 @@ namespace cryptographypractice1
                 mass2[k] = (byte)positionOfKey;
             }
             return mass2;
-        }   
-    
+        }
+
         public void Decryption(string shifr, string key)
         {
             byte[] massOfShifr = new byte[shifr.Length];
@@ -91,10 +91,7 @@ namespace cryptographypractice1
             {
                 if (counter >= key.Length) counter = 0;
                 int positionOfOutput = 0;
-                /*if (massOfShifr[counter] + massOfKey[i] > dictionatry.Length)
-                    positionOfOutput = (massOfKey[counter] + massOfShifr[i]) - dictionatry.Length - 1;
-                else*/
-                    positionOfOutput = (massOfShifr[counter] - massOfKey[i] + 25) % 25;
+                positionOfOutput = (massOfShifr[counter] - massOfKey[i] + 25) % 25;
                 counter++;
                 string symbolOfSlovar = dictionatry[positionOfOutput].ToString();   //slovar[positionOfOutput].ToString();
                 output = output.Insert(i, symbolOfSlovar);

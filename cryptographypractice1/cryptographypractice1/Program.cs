@@ -6,9 +6,13 @@ namespace cryptographypractice1
     {
         static void Main(string[] args)
         {
+            #region
             kod_vizhinera newKod = new kod_vizhinera("М", "к");
-            newKod.Encryption("ATTACKATDAWN", "LEMONLEMONLE");
-            newKod.Decryption("LXFOPVEFRNHR", "LEMONLEMONLE");
+            /* newKod.Encryption("ATTACKATDAWN", "LEMONLEMONLE");
+             newKod.Decryption("LXFOPVEFRNHR", "LEMONLEMONLE");*/
+            #endregion
+            Permutation newKod2 = new Permutation();
+            newKod2.Encryption("aboba", "01234");
         }
     }
 }

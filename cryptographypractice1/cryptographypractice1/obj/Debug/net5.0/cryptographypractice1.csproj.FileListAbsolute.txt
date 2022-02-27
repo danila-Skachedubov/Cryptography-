@@ -1,0 +1,16 @@
+H:\иНСТИТУТ\cryptographypractice1\cryptographypractice1\obj\Debug\net5.0\cryptographypractice1.csproj.AssemblyReference.cache
+H:\иНСТИТУТ\cryptographypractice1\cryptographypractice1\obj\Debug\net5.0\cryptographypractice1.GeneratedMSBuildEditorConfig.editorconfig
+H:\иНСТИТУТ\cryptographypractice1\cryptographypractice1\obj\Debug\net5.0\cryptographypractice1.AssemblyInfoInputs.cache
+H:\иНСТИТУТ\cryptographypractice1\cryptographypractice1\obj\Debug\net5.0\cryptographypractice1.AssemblyInfo.cs
+H:\иНСТИТУТ\cryptographypractice1\cryptographypractice1\obj\Debug\net5.0\cryptographypractice1.csproj.CoreCompileInputs.cache
+H:\иНСТИТУТ\cryptographypractice1\cryptographypractice1\bin\Debug\net5.0\cryptographypractice1.exe
+H:\иНСТИТУТ\cryptographypractice1\cryptographypractice1\bin\Debug\net5.0\cryptographypractice1.deps.json
+H:\иНСТИТУТ\cryptographypractice1\cryptographypractice1\bin\Debug\net5.0\cryptographypractice1.runtimeconfig.json
+H:\иНСТИТУТ\cryptographypractice1\cryptographypractice1\bin\Debug\net5.0\cryptographypractice1.runtimeconfig.dev.json
+H:\иНСТИТУТ\cryptographypractice1\cryptographypractice1\bin\Debug\net5.0\cryptographypractice1.dll
+H:\иНСТИТУТ\cryptographypractice1\cryptographypractice1\bin\Debug\net5.0\ref\cryptographypractice1.dll
+H:\иНСТИТУТ\cryptographypractice1\cryptographypractice1\bin\Debug\net5.0\cryptographypractice1.pdb
+H:\иНСТИТУТ\cryptographypractice1\cryptographypractice1\obj\Debug\net5.0\cryptographypractice1.dll
+H:\иНСТИТУТ\cryptographypractice1\cryptographypractice1\obj\Debug\net5.0\ref\cryptographypractice1.dll
+H:\иНСТИТУТ\cryptographypractice1\cryptographypractice1\obj\Debug\net5.0\cryptographypractice1.pdb
+H:\иНСТИТУТ\cryptographypractice1\cryptographypractice1\obj\Debug\net5.0\cryptographypractice1.genruntimeconfig.cache

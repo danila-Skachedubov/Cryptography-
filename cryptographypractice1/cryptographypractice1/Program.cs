@@ -7,10 +7,10 @@ namespace cryptographypractice1
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, world!");
-            #region
+            /*#region
             kod_vizhinera newKod = new kod_vizhinera("М", "к");
-            /* newKod.Encryption("ATTACKATDAWN", "LEMONLEMONLE");
-             newKod.Decryption("LXFOPVEFRNHR", "LEMONLEMONLE");*/
+             newKod.Encryption("ATTACKATDAWN", "LEMONLEMONLE");
+             newKod.Decryption("LXFOPVEFRNHR", "LEMONLEMONLE");
             #endregion
             #region
             Permutation newKod2 = new Permutation();
@@ -19,9 +19,12 @@ namespace cryptographypractice1
             #endregion
             #region
             Xor xor = new Xor();
-            //xor.Encryption("HELLO");
+            xor.Encryption("HELLO");
             xor.Decryption("DIWTD", "WDKHP");
             #endregion
+            MonomorphicDictionary neww = new MonomorphicDictionary();
+            neww.CalculateFrequency("aboba");
+            neww.Decryption("aboba");*/
         }
     }
 }

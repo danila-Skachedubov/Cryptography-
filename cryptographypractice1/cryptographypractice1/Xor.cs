@@ -9,7 +9,7 @@ namespace cryptographypractice1
     class Xor
     {
         private static string dictionatry = " ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        public void Encryption(string input)
+        public string Encryption(string input)
         {           
             input.Insert(0, " ");
            byte[] mass1 =  WordNumbering(input);
@@ -24,6 +24,7 @@ namespace cryptographypractice1
                 output += dictionatry[mass3[i]];
             }
             Console.WriteLine(output);
+            return output;
         }
 
         private byte[] WordNumbering(string input)
@@ -61,7 +62,7 @@ namespace cryptographypractice1
             return arr;
         }
 
-        public void Decryption(string shifr, string key)
+        public string Decryption(string shifr, string key)
         {
             byte[] mass1 = WordNumbering(shifr);
             byte[] mass2 = WordNumbering(key);
@@ -75,6 +76,7 @@ namespace cryptographypractice1
                 output += dictionatry[mass3[i]];
             }
             Console.WriteLine(output);
+            return output;
         }
     }
 }

@@ -21,7 +21,7 @@ namespace cryptographypractice1
             input = Input;
             key = Key1;
         }
-        public void Encryption(string Input, string key)
+        public string Encryption(string Input, string key)
         {
             string output = string.Empty;
             byte[] mass = new byte[Input.Length];
@@ -44,6 +44,7 @@ namespace cryptographypractice1
                 output = output.Insert(i, symbolOfSlovar);
             }
             Console.WriteLine(output);
+            return output;
         }
 
         private byte[] WordNumbering(string input)
@@ -78,7 +79,7 @@ namespace cryptographypractice1
             return mass2;
         }
 
-        public void Decryption(string shifr, string key)
+        public string Decryption(string shifr, string key)
         {
             byte[] massOfShifr = new byte[shifr.Length];
             byte[] massOfKey = new byte[key.Length];
@@ -97,6 +98,7 @@ namespace cryptographypractice1
                 output = output.Insert(i, symbolOfSlovar);
             }
             Console.WriteLine(output);
+            return output;
         }
     }
 }

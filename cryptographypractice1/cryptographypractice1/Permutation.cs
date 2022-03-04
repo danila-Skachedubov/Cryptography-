@@ -8,7 +8,7 @@ namespace cryptographypractice1
 {
     class Permutation
     {
-        public void Encryption(string input, string key)
+        public string Encryption(string input, string key)
         {
             string[] output = new string[input.Length];
             int[] arr = key.ToCharArray().Select(i => int.Parse(i.ToString())).ToArray();
@@ -37,9 +37,10 @@ namespace cryptographypractice1
             }
 
             Console.WriteLine(result);
+            return result;
         }
 
-        public void Deryption(string shifr, string key)
+        public string Deryption(string shifr, string key)
         {
             string result = "";
             int[] arr = key.ToCharArray().Select(i => int.Parse(i.ToString())).ToArray();
@@ -53,8 +54,8 @@ namespace cryptographypractice1
                 for (int j = 0; j < key.Length; j++)
                     result += transposition[j];
             }
-
             Console.WriteLine(result);
+            return result;
         }
     }
 }

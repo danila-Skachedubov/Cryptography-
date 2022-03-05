@@ -21,9 +21,12 @@ namespace cryptographypractice1
             byte a = 0;
             for (int i = 0; i < input.Length; i++)
             {
-                a = (byte)rand.Next(33, 127);
+
+                int x = 127;
+                a = (byte)rand.Next(33, x);
                 table.Add(dictionary[a], input[i].ToString());
                 dictionary.RemoveAt((int)a);
+                x--;
             }
             string shifr = string.Empty;
             foreach (var item in table)

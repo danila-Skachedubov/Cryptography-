@@ -15,12 +15,6 @@ namespace cryptographypractice1
         public string Input { get => input; set => input = value; }
 
         public string Key1 { get => key; set => key = value; }
-
-        public kod_vizhinera(string input, string key)
-        {
-            input = Input;
-            key = Key1;
-        }
         public string Encryption(string Input, string key)
         {
             string output = string.Empty;

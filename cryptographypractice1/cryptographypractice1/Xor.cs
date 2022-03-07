@@ -9,21 +9,25 @@ namespace cryptographypractice1
     class Xor
     {
         private static string dictionatry = " ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        private string key = string.Empty;
+
+        public string Key { get => key; set => key = value; }
+
         public string Encryption(string input)
-        {           
+        {
             input.Insert(0, " ");
-           byte[] mass1 =  WordNumbering(input);
-           byte[] mass2 =  Random(input);
-           byte[] mass3 = new byte[input.Length];
-           string output = string.Empty;
+            byte[] mass1 = WordNumbering(input);
+            byte[] mass2 = Random(input);
+            byte[] mass3 = new byte[input.Length];
+            string output = string.Empty;
             for (int i = 0; i < input.Length; i++)
             {
                 if (mass1[i] + mass2[i] >= 27) mass3[i] = (byte)((mass1[i] + mass2[i]) - (byte)dictionatry.Length);
                 else
-                mass3[i] = (byte)(mass1[i] + mass2[i]);
+                    mass3[i] = (byte)(mass1[i] + mass2[i]);
                 output += dictionatry[mass3[i]];
             }
-            Console.WriteLine(output);
+            Console.WriteLine("Зашифрованное сообщение" + output);
             return output;
         }
 
@@ -50,32 +54,32 @@ namespace cryptographypractice1
         public byte[] Random(string input)
         {
             Random rnd = new Random();
-            string key = string.Empty;
-            byte[] arr = new byte[input.Length];            
+            byte[] arr = new byte[input.Length];
             for (int i = 0; i < input.Length; i++)
             {
                 int value = rnd.Next(1, 26);
                 arr[i] = (byte)value;
-                key += dictionatry[value];
+                Key += dictionatry[value];
             }
-            Console.WriteLine("Key is:" + key);
+            Console.WriteLine("Key is:" + Key);
             return arr;
         }
 
-        public string Decryption(string shifr, string key)
+        public string Decryption(string shifr)
         {
+            shifr.ToUpper();
             byte[] mass1 = WordNumbering(shifr);
-            byte[] mass2 = WordNumbering(key);
+            byte[] mass2 = WordNumbering(Key);
             byte[] mass3 = new byte[shifr.Length];
             string output = string.Empty;
             for (int i = 0; i < shifr.Length; i++)
             {
-                if (mass1[i] - mass2[i] <= 0)  mass3[i] = (byte)((mass1[i] - mass2[i]) + (byte)dictionatry.Length);
+                if (mass1[i] - mass2[i] <= 0) mass3[i] = (byte)((mass1[i] - mass2[i]) + (byte)dictionatry.Length);
                 else
                     mass3[i] = (byte)(mass1[i] - mass2[i]);
                 output += dictionatry[mass3[i]];
             }
-            Console.WriteLine(output);
+            Console.WriteLine("Расшифрованное сообщение" + output);
             return output;
         }
     }

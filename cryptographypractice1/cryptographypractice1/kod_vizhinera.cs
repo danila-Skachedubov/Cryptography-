@@ -30,14 +30,14 @@ namespace cryptographypractice1
                 if (counter >= key.Length) counter = 0;
                 int positionOfOutput = 0;
                 if (mass2[counter] + mass[i] > dictionatry.Length)
-                    positionOfOutput = (mass2[counter] + mass[i]) - dictionatry.Length;
+                    positionOfOutput = (mass2[counter] + mass[i]) - dictionatry.Length + 1;
                 else
                     positionOfOutput = (mass2[counter] + mass[i]) % 25;
                 counter++;
                 string symbolOfSlovar = dictionatry[positionOfOutput].ToString();   //slovar[positionOfOutput].ToString();
                 output = output.Insert(i, symbolOfSlovar);
             }
-            Console.WriteLine(output);
+            Console.WriteLine("Зашифрованное сообщение" + output);
             return output;
         }
 
@@ -91,7 +91,7 @@ namespace cryptographypractice1
                 string symbolOfSlovar = dictionatry[positionOfOutput].ToString();   //slovar[positionOfOutput].ToString();
                 output = output.Insert(i, symbolOfSlovar);
             }
-            Console.WriteLine(output);
+            Console.WriteLine("Расшифрованное сообщение " + output);
             return output;
         }
     }

@@ -36,7 +36,7 @@ namespace cryptographypractice1
                     result += output[j];
             }
 
-            Console.WriteLine(result);
+            Console.WriteLine("Зашифрованное сообщение " + result);
             return result;
         }
 
@@ -54,7 +54,7 @@ namespace cryptographypractice1
                 for (int j = 0; j < key.Length; j++)
                     result += transposition[j];
             }
-            Console.WriteLine(result);
+            Console.WriteLine("Расшифрованное сообщение " + result);
             return result;
         }
     }

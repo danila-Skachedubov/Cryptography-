@@ -11,7 +11,7 @@ namespace cryptographypractice1
         List<char> dictionary = new List<char>();
         public Dictionary<char, string> table = new Dictionary<char, string>();
 
-        public void CalculateFrequency(string input)
+        public string CalculateFrequency(string input)
         {
             for (int i = 0; i < 127; i++)
             {
@@ -33,13 +33,17 @@ namespace cryptographypractice1
             {
                 shifr += item.Key.ToString();
             }
-            Console.WriteLine(shifr);
-        }  
+            Console.WriteLine("Зашифрованное сообщение" + shifr);
+            return shifr;
+        }
 
-        public void Decryption(string input)
+        public string Decryption(string input)
         {
             if (table.Count == 0)
+            {
                 Console.WriteLine("Таблица не заполнена, введите слово для шифровки");
+                return "0";
+            }
             else
             {
                 string output = string.Empty;
@@ -47,7 +51,8 @@ namespace cryptographypractice1
                 {
                     output += item.Value;
                 }
-                Console.Write(output);
+                Console.WriteLine("Расшифрованное сообщение" + output);
+                return output;
             }
         }
     }
